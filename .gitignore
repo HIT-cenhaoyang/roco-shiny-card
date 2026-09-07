@@ -1,0 +1,30 @@
+# Python 缓存与构建产物
+__pycache__/
+*.py[cod]
+*$py.class
+build/
+dist/
+*.egg-info/
+
+# 虚拟环境
+.venv/
+venv/
+env/
+ENV/
+
+# 本地运行配置与生成结果
+auto_cfg.json
+manual_counts.json
+result.csv
+click_debug.log
+marked.png
+detail_star.png
+roi.json
+
+# 编辑器与系统文件
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+炫彩
