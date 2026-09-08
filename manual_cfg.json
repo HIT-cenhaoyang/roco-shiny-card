@@ -1,0 +1,13 @@
+{
+  "hwnd": 1775524,
+  "window_title": "洛克王国：世界  ",
+  "panel_roi": {
+    "ox": 966,
+    "oy": 495,
+    "w": 235,
+    "h": 131
+  },
+  "hotkey": "f8",
+  "min_similarity": 0.55,
+  "color_tol": 8000
+}
