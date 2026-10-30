@@ -7,7 +7,10 @@
       需同目录 xuancai_count.py / auto_detect.py
 运行: python gui.py
 """
+# 已归档（legacy）：v1 的自动点击 GUI，可能触发游戏反作弊，默认不要运行。
+# 主流程请用项目根目录的 manual_count.py（只移动鼠标、不点击）。
 import os, sys, json, glob, time, threading, queue
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import tkinter as tk
 from tkinter import messagebox, filedialog
 import numpy as np, cv2, pyautogui

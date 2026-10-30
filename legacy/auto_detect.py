@@ -16,7 +16,10 @@
   python auto_detect.py dry-run   在网格上画格子并标出检测到的星, 存 marked.png(不点击, 先核对!)
   python auto_detect.py run       自动遍历点击读色, 生成 result.csv
 """
-import os, sys, json, argparse
+# 已归档（legacy）：v1 的自动点击流程，可能触发游戏反作弊，默认不要运行。
+# 主流程请用项目根目录的 manual_count.py（只移动鼠标、不点击）。
+import os, sys, json, argparse, time
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import numpy as np, cv2, mss, pyautogui
 from collections import Counter
 try:
@@ -84,7 +87,7 @@ def grab_client(client, region=None):
     return img[y:y+h, x:x+w], (x, y)
 
 def client_crop_pts(pts, cx, cy):
-    """把[crop内坐标]转回[屏幕坐标]"""l
+    """把[crop内坐标]转回[屏幕坐标]"""
     return [(cx+px, cy+py) for px,py in pts]
 
 def physical_click(x, y):

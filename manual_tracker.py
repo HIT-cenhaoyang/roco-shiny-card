@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
-"""手动炫彩统计器。
+"""手动炫彩统计器（备用）。
 
 本模块不访问游戏窗口、不截图、不发送鼠标输入，也不识别图标。
-用户在游戏中手动查看详情后，在这里记录炫彩类型。
+用户在游戏中手动查看详情后，在这里按组合编号记录。
+与主程序 manual_count.py 二选一：需要截图识别用 manual_count，纯手输用本工具。
+
+导出文件为 manual_tracker_result.csv，避免和主程序输出冲突。
 """
 import csv
 import json
@@ -12,7 +15,7 @@ from tkinter import filedialog, messagebox, ttk
 from collections import Counter
 
 DATA_FILE = "manual_counts.json"
-RESULT_FILE = "result.csv"
+RESULT_FILE = "manual_tracker_result.csv"
 NORMAL_COMBOS = 39
 PARTICLES = 4
 
@@ -97,7 +100,7 @@ class ManualTracker:
         actions = tk.Frame(self.root)
         actions.pack(fill="x", padx=10, pady=(0, 10))
         tk.Button(actions, text="撤销上一条", command=self._undo).pack(side="left")
-        tk.Button(actions, text="导出 result.csv", command=self._export).pack(side="left", padx=8)
+        tk.Button(actions, text=f"导出 {RESULT_FILE}", command=self._export).pack(side="left", padx=8)
         tk.Button(actions, text="清空统计", command=self._clear).pack(side="right")
         self.status = tk.Label(actions, text="", fg="#555", anchor="e")
         self.status.pack(side="right", padx=12)

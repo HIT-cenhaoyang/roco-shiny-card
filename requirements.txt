@@ -1,6 +1,10 @@
+# Windows 10/11；建议 Python 3.10 - 3.13（3.14 可能暂无部分依赖的 wheel）
 mss>=9.0
 opencv-python>=4.8
 numpy>=1.24
 pillow>=10.0
 pywin32>=306
 keyboard>=0.13.5
+
+# 仅 legacy/ 旧版自动点击入口需要（不推荐运行）：
+# pyautogui>=0.9

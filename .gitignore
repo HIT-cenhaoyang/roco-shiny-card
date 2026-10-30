@@ -5,6 +5,7 @@ __pycache__/
 build/
 dist/
 *.egg-info/
+.pytest_cache/
 
 # 虚拟环境
 .venv/
@@ -12,21 +13,35 @@ venv/
 env/
 ENV/
 
-# 本地运行配置与生成结果
+# 本地运行配置（含窗口句柄 / 本机校准坐标）
+manual_cfg.json
 auto_cfg.json
-manual_counts.json
+
+# 运行产物（新版本统一写到 output/）
+output/
+manual_result.csv
 result.csv
-click_debug.log
+xuancai_result.csv
+manual_tracker_result.csv
+combo_counts.json
+manual_counts.json
+session.jsonl
+last_panel.png
 marked.png
+stat_card.png
 detail_star.png
+click_debug.log
 roi.json
+samples/
+_test_*/
+
+# 本地色卡、图标模板与测试（暂不推送）
+炫彩/
+icons/
+tests/
 
 # 编辑器与系统文件
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
-
-炫彩
-*.png
-*.csv

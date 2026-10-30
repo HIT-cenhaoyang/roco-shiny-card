@@ -188,7 +188,7 @@ def summarize(counter):
     print(f"\n共 {len(counter)} 种组合，{total} 只炫彩精灵")
 
 
-def save_csv(counter, path="result.csv"):
+def save_csv(counter, path="xuancai_result.csv"):
     with open(path, "w", encoding="utf-8-sig") as f:
         f.write("颜色一_RGB,颜色二_RGB,数量\n")
         for (c1, c2), n in counter.most_common():
@@ -202,7 +202,7 @@ def run_batch(img_dir):
     files = sorted(glob.glob(os.path.join(img_dir, "*.png")) +
                    glob.glob(os.path.join(img_dir, "*.jpg")) +
                    glob.glob(os.path.join(img_dir, "*.jpeg")))
-    files = [f for f in files if not f.endswith("result.csv")]
+    files = [f for f in files if not f.endswith("xuancai_result.csv")]
     if not files:
         print("文件夹里没有图片:", img_dir)
         return
