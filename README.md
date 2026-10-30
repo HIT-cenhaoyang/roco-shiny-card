@@ -160,7 +160,7 @@ python -m unittest discover -s tests -v
 | `manual_tracker.py` | 备用纯手动记录器（不截图，按组合编号记录），与主程序二选一 |
 | `炫彩/` | 160 张色卡（156 普通 + 1 黑白 + 3 赛季） |
 | `icons/` | 炫彩星模板（F7 学习；普通/异色/赛季可各一张） |
-| `xuancai2_mapping.csv` | 色卡来源/命名对照 |
+| `xuancai2_mapping.csv` | 色卡来源/命名对照（UTF-8 BOM，Excel 可直接打开） |
 | `legacy/` | v1 自动点击入口，已归档，不建议运行 |
 | `run.bat` | 普通权限启动 |
 | `run_admin.bat` | 自提权启动；游戏是管理员时用（当前推荐） |
